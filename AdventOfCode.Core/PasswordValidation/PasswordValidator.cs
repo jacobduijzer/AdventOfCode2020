@@ -19,8 +19,8 @@ namespace AdventOfCode.Core.PasswordValidation
             password.PasswordString.Count(x => x == password.Character) <= password.LastNumber;
 
         private static bool ValidateWithMethod2(this Password password) =>
-            Convert.ToInt32(password.PasswordString[password.FirstNumber - 1].Equals(password.Character)) +
-            Convert.ToInt32(password.PasswordString[password.LastNumber - 1].Equals(password.Character)) == 1;
+            password.PasswordString[password.FirstNumber - 1].Equals(password.Character) ^
+            password.PasswordString[password.LastNumber - 1].Equals(password.Character);
 
         private static Password GetPasswordFromString(string input)
         {
