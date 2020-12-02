@@ -1,3 +1,4 @@
-﻿using AdventOfCode.ConsoleApp;
+﻿using AdventOfCode.ConsoleApp.Programs;
 
-TotalExpenses.Run();
+// Day1_TotalExpenses.Run();
+Day2_PasswordValidation.Run();

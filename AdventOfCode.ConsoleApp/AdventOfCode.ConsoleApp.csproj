@@ -9,4 +9,10 @@
       <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Input\day2.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

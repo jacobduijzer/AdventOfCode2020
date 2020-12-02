@@ -12,7 +12,7 @@ namespace AdventOfCode.Tests.ExpenseReport
         private readonly int[] _threeNumberResultSampleData = new[] {1, 2, 3, 4, 5, 6, 1010, 505, 505, 7, 8, 9, 10};
 
         [Fact]
-        public void ReturnTupleWithTwoNumbers()
+        public void ReturnTwoNumbersResult()
         {
             // ARRANGE
             var sut = new ReportCalculator(_twoNumberResultSampleData);
@@ -52,7 +52,7 @@ namespace AdventOfCode.Tests.ExpenseReport
         }
 
         [Fact]
-        public void ReturnTupleWithThreeNumbers()
+        public void ReturnThreeNumbersResult()
         {
             // ARRANGE
             var sut = new ReportCalculator(_threeNumberResultSampleData);

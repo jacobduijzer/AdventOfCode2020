@@ -1,14 +1,14 @@
 using System;
 using AdventOfCode.Core.ExpenseReport;
 
-namespace AdventOfCode.ConsoleApp
+namespace AdventOfCode.ConsoleApp.Programs
 {
-    public static class TotalExpenses
+    public static class Day1_TotalExpenses
     {
         public static void Run()
         {
             var expenseCalculator = new ReportCalculator(_input);
-            
+
             var twoNumberResult = expenseCalculator.FindTwoNumberResult();
             Console.WriteLine($"Two digits: {twoNumberResult.Number1} * {twoNumberResult.Number2} = {twoNumberResult.TotalExpenses}");
 
@@ -16,7 +16,7 @@ namespace AdventOfCode.ConsoleApp
             Console.WriteLine(
                 $"Three digits: {threeNumberResult.Number1} * {threeNumberResult.Number2} * {threeNumberResult.Number3} = {threeNumberResult.TotalExpense}");
         }
-        
+
         private static int[] _input =
         {
             1583,
