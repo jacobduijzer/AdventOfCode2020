@@ -1,28 +1,35 @@
-using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using AdventOfCode.Core;
 using AdventOfCode.Core.PasswordValidation;
 
 namespace AdventOfCode.ConsoleApp.Programs
 {
-    public static class Day2_PasswordValidation
+    public class Day2_PasswordValidation : ProgramBase
     {
-        public static void Run()
+        private readonly List<string> _input;
+
+        public Day2_PasswordValidation() => _input = File.ReadAllLines("Input/day2.txt").ToList();
+
+        public override void RunExercise1()
         {
-            int valid = 0;
-            var input = File.ReadAllLines("Input/day2.txt").ToList();
-            foreach(var line in input)
+            var validPasswords = 0;
+            foreach(var line in _input)
                 if (PasswordValidator.FirstValidation(line))
-                    valid++;
+                    validPasswords++;
 
-            Console.WriteLine($"Validation method 1: Valid amount: {valid}");
+            LogMessage($"valid passwords: {validPasswords}");
+        }
 
-            valid = 0;
-            foreach (var line in input)
+        public override void RunExercise2()
+        {
+            var validPasswords = 0;
+            foreach(var line in _input)
                 if (PasswordValidator.SecondValidation(line))
-                    valid++;
+                    validPasswords++;
 
-            Console.WriteLine($"Validation method 2: Valid amount: {valid}");
+            LogMessage($"valid passwords: {validPasswords}");
         }
     }
 }

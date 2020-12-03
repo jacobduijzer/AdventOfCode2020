@@ -24,4 +24,13 @@
       <ProjectReference Include="..\AdventOfCode.Core\AdventOfCode.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="TobogganTrajectory\testinput.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="TobogganTrajectory\fullinput.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
