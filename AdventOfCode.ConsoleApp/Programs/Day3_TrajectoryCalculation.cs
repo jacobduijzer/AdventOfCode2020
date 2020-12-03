@@ -18,7 +18,7 @@ namespace AdventOfCode.ConsoleApp.Programs
                     new List<(int verticalStep, int horizontalStep)> {( verticalStep: 1, horizontalStep: 3 )},
                     x => x == '#');
 
-            LogMessage($"Puzzle 1, number of trees: Valid amount: {numberOfTrees}");
+            LogMessage($"number of trees: Valid amount: {numberOfTrees}");
         }
 
         public override void RunExercise2()
@@ -33,7 +33,7 @@ namespace AdventOfCode.ConsoleApp.Programs
                     ( verticalStep: 2, horizontalStep: 1 )
                 }, x => x == '#');
 
-            LogMessage($"Puzzle 2, number of trees: Valid amount: {numberOfTrees}");
+            LogMessage($"number of trees: Valid amount: {numberOfTrees}");
         }
     }
 }
